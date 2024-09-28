@@ -47,12 +47,29 @@ where country.name = "Finland" and scheduled_service = "yes";
 ![21](https://github.com/user-attachments/assets/cd4109c3-2f1e-4c9d-96a5-428e8c652ad9)
 #2 select screen_name, name from game inner join airports on airports.ident = game.location;
 ![22](https://github.com/user-attachments/assets/6681be04-e24c-4287-989e-5d02140fb15b)
-#3 select country.name as country_name, airport.name as airport_name from country, airport where airport.iso_country = country.iso_country and country.continent = 'AN';
-
+#3 select country.name as country_name, airports.name as airports_name 
+from country, airports
+where airports.iso_country = country.iso_country and country.continent = 'AN';
+![23](https://github.com/user-attachments/assets/e93f90a8-793b-4bb0-a08d-679dec3aafed)
 #4 select name, screen_name from airports left join game on ident=location where name like "%Hels%";
 ![24](https://github.com/user-attachments/assets/85925371-2681-4a76-8290-09180adfa9e1)
 #5 select name, screen_name from goal left join goal_reached on goal_id =goal.id left join game on game.id= game_id
 ![25](https://github.com/user-attachments/assets/47c54a65-3982-4252-a800-0c54a09e1c76)
+# Exercise 5
+#1 select name from country where iso_country in( select iso_country from airport where name like 'Satsuma%' ); 
+<img width="497" alt="31" src="https://github.com/user-attachments/assets/0ed607bb-6192-424e-aa94-ebf163d8c5c0">
+#2 select NAME 
+from airports 
+where iso_country in( select iso_country from country where name = 'Monaco' );
+![32](https://github.com/user-attachments/assets/71172f12-ef8e-4453-bed1-6e0eeb0772e7)
+#3 select screen_name from game where id in( select game_id from goal_reached where goal_id in( select id from goal where name = 'CLOUDS') );
+![33](https://github.com/user-attachments/assets/66a88017-87be-4e19-8117-50e0b58f8db3)
+#4 select name from country where iso_country not in( select iso_country from airports );
+![34](https://github.com/user-attachments/assets/509d09d2-29fa-4951-af3b-526182e4c713)
+#5 select name from goal where id not in( select goal_id from goal_reached where game_id in( select id from game where screen_name = 'Heini' ) );
+![35](https://github.com/user-attachments/assets/ba8e47b3-34f4-40e9-a0e9-17d3ac4bb954)
+
+
 
 
 
