@@ -19,7 +19,7 @@
 ![9](https://github.com/user-attachments/assets/9f219dcc-6573-470a-a882-a74ed9ca868d)
 #10 select screen_name, co2_budget, co2_consumed, @co2_left := (co2_budget - co2_consumed) AS co2_left FROM game WHERE screen_name = 'Ilkka';
 ![10](https://github.com/user-attachments/assets/21fe3d9d-4802-4374-a50e-869b95169cc4)
-#Exercise 3  
+#  Exercise 3  
 #1 select country.name as "country name", airports.name as "airports name" from airports, country where airports.iso_country = country.iso_country and country.name = "Iceland";
 ![11](https://github.com/user-attachments/assets/69954301-a635-4f77-8122-274b4511db7b)
 #2 select airports.name as 'airports name' from airports, country where airports.iso_country = country.iso_country and country.name = 'France' and airports.type = 'large_airport';
@@ -40,6 +40,21 @@
 ![19](https://github.com/user-attachments/assets/d63985c0-1827-4408-bc2e-e7e26e7b2f52)
 #10
 ![20](https://github.com/user-attachments/assets/3a36de3d-4ebe-456b-90e0-f941fcdb7082)
+# Exercise 4 
+#1 select country.name as "country name", airports.name as "airports name" 
+from country inner join airports on airports.iso_country = country.iso_country 
+where country.name = "Finland" and scheduled_service = "yes";
+![21](https://github.com/user-attachments/assets/cd4109c3-2f1e-4c9d-96a5-428e8c652ad9)
+#2 select screen_name, name from game inner join airports on airports.ident = game.location;
+![22](https://github.com/user-attachments/assets/6681be04-e24c-4287-989e-5d02140fb15b)
+#3 select country.name as country_name, airport.name as airport_name from country, airport where airport.iso_country = country.iso_country and country.continent = 'AN';
+
+#4 select name, screen_name from airports left join game on ident=location where name like "%Hels%";
+![24](https://github.com/user-attachments/assets/85925371-2681-4a76-8290-09180adfa9e1)
+#5 select name, screen_name from goal left join goal_reached on goal_id =goal.id left join game on game.id= game_id
+![25](https://github.com/user-attachments/assets/47c54a65-3982-4252-a800-0c54a09e1c76)
+
+
 
 
 
