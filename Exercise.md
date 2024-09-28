@@ -68,17 +68,25 @@ where iso_country in( select iso_country from country where name = 'Monaco' );
 ![34](https://github.com/user-attachments/assets/509d09d2-29fa-4951-af3b-526182e4c713)
 #5 select name from goal where id not in( select goal_id from goal_reached where game_id in( select id from game where screen_name = 'Heini' ) );
 ![35](https://github.com/user-attachments/assets/ba8e47b3-34f4-40e9-a0e9-17d3ac4bb954)
+# Exercise 6
+#1 select max(elevation_ft) from airports;
+![41](https://github.com/user-attachments/assets/9f006f8e-2f1d-4790-8896-07d080e8234f)
+#2 select continent, count(*) from country group by continent;
 
+#3 select screen_name, count(*) from game, goal_reached where id = game_id group by screen_name;
 
+#4 select screen_name from game where co2_consumed in( select min(co2_consumed) from game );
 
+#5
 
+#6 select country.name 
+from airports, country 
+where airports.iso_country = country.iso_country group by country.iso_country having count(*) > 1000;
 
+#7
 
+#8
 
+#9
 
-
-
-
-
-
-
+#10
