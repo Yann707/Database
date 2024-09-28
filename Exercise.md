@@ -21,6 +21,26 @@
 ![10](https://github.com/user-attachments/assets/21fe3d9d-4802-4374-a50e-869b95169cc4)
 #Exercise 3  
 #1 select country.name as "country name", airports.name as "airports name" from airports, country where airports.iso_country = country.iso_country and country.name = "Iceland";
+![11](https://github.com/user-attachments/assets/69954301-a635-4f77-8122-274b4511db7b)
+#2 select airports.name as 'airports name' from airports, country where airports.iso_country = country.iso_country and country.name = 'France' and airports.type = 'large_airport';
+![12](https://github.com/user-attachments/assets/6354eb3f-fdbe-476e-8a8d-89686f47c6aa)
+#3
+![13](https://github.com/user-attachments/assets/65ebc630-2aac-443d-b7c5-c925f74d1b0c)
+#4
+![14](https://github.com/user-attachments/assets/720efe0c-71fc-4883-b6b5-e05c47d49e67)
+#5
+![15](https://github.com/user-attachments/assets/739441ed-863a-4db0-824b-c2efd5b0c9d3)
+#6
+![16](https://github.com/user-attachments/assets/74eb42f6-a963-423a-bc05-4a91d1ad8b6d)
+#7
+![17](https://github.com/user-attachments/assets/9b1c59a7-224a-4f6f-bf68-78debbe01db7)
+#8
+![18](https://github.com/user-attachments/assets/d5bdfad3-fdbf-45ab-ad8b-0b79ee740d95)
+#9
+![19](https://github.com/user-attachments/assets/d63985c0-1827-4408-bc2e-e7e26e7b2f52)
+#10
+![20](https://github.com/user-attachments/assets/3a36de3d-4ebe-456b-90e0-f941fcdb7082)
+
 
 
 
