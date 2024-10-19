@@ -79,15 +79,21 @@ where iso_country in( select iso_country from country where name = 'Monaco' );
 ![image](https://github.com/user-attachments/assets/f856850a-e96d-463b-bd95-4e16fe38b5d9)
 #5 select country.name, count() from country, airport where country.iso_country = airport.iso_country group by country.iso_country order by count() desc limit 50;
 <img width="770" alt="11" src="https://github.com/user-attachments/assets/b39bf9fe-ac98-4dfe-b756-18857c362efe">
-
 #6 select country.name 
 from airports, country 
 where airports.iso_country = country.iso_country group by country.iso_country having count(*) > 1000;
 ![image](https://github.com/user-attachments/assets/34fe3510-9e9a-4691-94c4-3477e5bb3c17)
-#7
-
-#8
-
-#9
-
-#10
+#7 select name from airport where elevation_ft in( select max(elevation_ft) from airport );
+<img width="567" alt="22" src="https://github.com/user-attachments/assets/dfec8069-8bff-4377-badd-8d34dcfb482f">
+#8 select name from country where iso_country in( select iso_country from airport where elevation_ft in( select max(elevation_ft) from airport) );
+![image](https://github.com/user-attachments/assets/a7151a1e-05ae-467f-bd03-55282c61050d)
+#9 select count(*) from goal_reached,game where game_id = game.id and screen_name = 'Vesa' group by screen_name;
+![image](https://github.com/user-attachments/assets/33792fb5-1826-459e-ba29-0469e6d400f6)
+#10 select name from airport where latitude_deg in( select min(latitude_deg) from airport );
+![image](https://github.com/user-attachments/assets/aefcd7c8-e85e-49d7-9d1b-5bbdf02d9acf)
+# Exercise 7
+#1 update game set location = (select ident from airport where name = "Nottingham Airport"), co2_consumed = co2_consumed + 500 where screen_name = "Vesa";
+select * from game;
+![image](https://github.com/user-attachments/assets/2558b887-0987-4494-8d97-83da379b9824)
+#3 delete from goal_reached; select * from goal_reached;
+#4 delete from game; select * from game;
