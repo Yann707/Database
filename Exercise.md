@@ -70,19 +70,20 @@ where iso_country in( select iso_country from country where name = 'Monaco' );
 ![35](https://github.com/user-attachments/assets/ba8e47b3-34f4-40e9-a0e9-17d3ac4bb954)
 # Exercise 6
 #1 select max(elevation_ft) from airports;
-![41](https://github.com/user-attachments/assets/9f006f8e-2f1d-4790-8896-07d080e8234f)
+![image](https://github.com/user-attachments/assets/85c46698-7ac2-4cbf-8f64-4fd5ffab5e4c)
 #2 select continent, count(*) from country group by continent;
-
+![image](https://github.com/user-attachments/assets/9e17ca5f-c955-454a-a05f-f95f79b9dff1)
 #3 select screen_name, count(*) from game, goal_reached where id = game_id group by screen_name;
-
+![image](https://github.com/user-attachments/assets/62744522-69b8-41b9-bbdd-4e7040e7eac0)
 #4 select screen_name from game where co2_consumed in( select min(co2_consumed) from game );
-
-#5
+![image](https://github.com/user-attachments/assets/f856850a-e96d-463b-bd95-4e16fe38b5d9)
+#5 select country.name, count() from country, airport where country.iso_country = airport.iso_country group by country.iso_country order by count() desc limit 50;
+<img width="770" alt="11" src="https://github.com/user-attachments/assets/b39bf9fe-ac98-4dfe-b756-18857c362efe">
 
 #6 select country.name 
 from airports, country 
 where airports.iso_country = country.iso_country group by country.iso_country having count(*) > 1000;
-
+![image](https://github.com/user-attachments/assets/34fe3510-9e9a-4691-94c4-3477e5bb3c17)
 #7
 
 #8
