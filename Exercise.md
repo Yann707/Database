@@ -96,4 +96,5 @@ where airports.iso_country = country.iso_country group by country.iso_country ha
 select * from game;
 ![image](https://github.com/user-attachments/assets/2558b887-0987-4494-8d97-83da379b9824)
 #3 delete from goal_reached; select * from goal_reached;
+
 #4 delete from game; select * from game;
